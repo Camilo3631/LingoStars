@@ -30,7 +30,7 @@
       </transition>
 
       <!-- Banderas -->
-      <div class="flex flex-wrap justify-center gap-6 w-full mt-4">
+      <div class="grid grid-cols-3 gap-6 w-full mt-4 sm:flex sm:flex-wrap sm:justify-center">
         <div
           v-for="lang in languages"
           :key="lang.code"

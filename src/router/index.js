@@ -18,37 +18,37 @@ const router = createRouter({
       path: '/pl',
       name: "Pl",
       component: () => import('../views/PlView.vue'),
-      alias: ['/Pl', '/polish']
+      alias: ['/pl', '/polish', '/exercises/pl']
     },
     {
       path: '/fr',
       name: 'Fr',
       component: () => import('../views/FrView.vue'),
-      alias: ['/Fr', '/french']
+      alias: ['/fr', '/french', '/exercises/fr']
     },
     {
       path: '/en',
       name: 'En',
       component: () => import('../views/EnView.vue'),
-      alias: ['/En', '/english']
+      alias: ['/en', '/english', '/exercises/en']
     },
     {
       path: '/es',
       name: 'Es',
       component: () => import('../views/EsView.vue'),
-      alias: ['/Es', '/spanish']
+      alias: ['/es', '/spanish', '/exercises/es']
     },
     {
       path: '/it',
       name: 'It',
       component: () => import('../views/ItView.vue'),
-      alias: ['/It', '/italian']
+      alias: ['/it', '/italian', '/exercises/it']
     },
     {
       path: '/de',
       name: 'De',
       component: () => import('../views/DeView.vue'),
-      alias: ['/De', '/german']
+      alias: ['/de', '/german', '/exercises/de']
     }
   ]
 })
