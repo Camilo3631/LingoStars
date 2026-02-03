@@ -118,7 +118,7 @@ watch(lives, (v) => {
   if (v === 0) feedback.value = 'Game Over ❌'
 })
 
-watch(currentSentence, (v) => {
+watch(currentStreak, (v) => {
   if (v > 0 && v % 5 === 0) lives.value++
 })
 

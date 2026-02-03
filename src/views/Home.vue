@@ -1,10 +1,12 @@
 <template>
   <Layout>
-   <template #header>
-     <Header/>
-   </template>
-    <Welcome />
-   </Layout>
+    <template #header>
+      <Header/>
+    </template>
+    <template #Welcome>
+      <Welcome />
+    </template>
+  </Layout>
 </template>
 
 

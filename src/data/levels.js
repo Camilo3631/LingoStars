@@ -193,11 +193,55 @@ export const levelsByLanguage = {
 
             ]
         }
+    ],
 
-
-
-
-    ]
+    it: [
+        {
+            name: 'Beginner',
+            sentences: [
+                { full: 'Mangio ___ ogni giorno', missing: 'pane', options: ['pane', 'riso', 'carne'] },
+                { full: 'Il ___ è buono', missing: 'caffè', options: ['caffè', 'latte', 'succo'] },
+                { full: 'Lei ___ a casa', missing: 'lavora', options: ['lavora', 'mangia', 'dorme'] },
+                { full: 'Andiamo al ___', missing: 'parco', options: ['parco', 'cinema', 'ufficio'] }
+            ]
+        },
+        {
+            name: 'Elementary',
+            sentences: [
+                { full: 'Io sono ___', missing: 'studente', options: ['studente', 'medico', 'cuoco'] },
+                { full: 'Vivo a ___', missing: 'Roma', options: ['Roma', 'Milano', 'Parigi'] },
+                { full: 'Bevo ___', missing: 'acqua', options: ['acqua', 'vino', 'latte'] },
+                { full: 'Ho un ___', missing: 'amico', options: ['amico', 'carne', 'fratello'] }
+            ]
+        },
+        {
+            name: 'Intermediate',
+            sentences: [
+                { full: 'Studio ___ la sera', missing: 'italiano', options: ['italiano', 'spagnlo', 'tedesco'] },
+                { full: 'Loro ___ molto', missing: 'Viaggiano', options: ['viaggiano', 'dormono', 'leggono'] },
+                { full: 'Il treno ___ presto', missing: 'parte', options: ['parte', 'arriva', 'finisce'] },
+                { full: 'Mi piace ___ musica', missing: 'ascoltare', options: ['ascoltare', 'scrivere', 'compare'] }
+            ]
+        },
+        {
+            name: 'Upper-Intermediate',
+            sentences: [
+                { full: 'Se ho tempo, ___ viaggio', missing: 'faccio', options: ['faccio', 'bevo', 'vendo'] },
+                { full: 'Stiamo ___ un progetto', missing: 'preparando', options: ['preparando', 'mangiando', 'dormendo'] },
+                { full: 'Il film ___ interessante', missing: 'sembra', options: ['sembra', 'mangia', 'corre'] },
+                { full: 'Lui ___ lavarore qui', missing: 'voule', options: ['vuole', 'vede', 'entra'] }
+            ]
+        },
+        {
+            name: 'Advanced',
+            sentences: [
+                { full: 'Nonostante la pioggia, ___', missing: 'continuiamo', options: ['continuiamo', 'partiamo', 'chiudiamo'] },
+                { full: 'Avei ___ più tempo', missing: 'voluto', options: ['voltuto', 'preso', 'letto'] },
+                { full: 'È importante ___ bene', missing: 'comunicare', options: ['comunicare', 'viaggiare', 'mangiare'] },
+                { full: 'Si dice che ___ domani', missing: 'pioverà', options: ['pioverà', 'mangia', 'corre'] }
+            ]
+        }
+    ],
 
 }
 

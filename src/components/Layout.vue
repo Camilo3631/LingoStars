@@ -6,7 +6,7 @@
 
     <!-- Contenido principal ocupa todo el espacio restante -->
     <main class="flex-1 w-full flex flex-col">
-      <slot></slot>
+      <slot name="Welcome"></slot>
     </main>
 
   </div>
