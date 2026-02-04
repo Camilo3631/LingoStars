@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { levelsByLanguage } from '../data/levels.js'
 
 import HeaderRoute from '@/components/HeaderRoute.vue'
@@ -66,6 +66,27 @@ const shuffledOptions = computed(() =>
   [...currentSentence.value.options].sort(() => Math.random() - 0.5)
 )
 
+// --- Funciones de almacenamiento local ---
+const saveProgress = () => {
+  const progress =  {
+      LevelIndex: LevelIndex.value,
+      sentenceIndex: sentenceIndex.value,
+      lives: lives.value,
+      currentStreak: currentStreak.value
+  }
+  localStorage.setItem('gameProgress', JSON.stringify(progress))
+}
+
+const readProgress = () => {
+   const progress = JSON.parse(localStorage.getItem('gameProgress'))
+    if (progress) {
+         LevelIndex.value = progress.LevelIndex
+         sentenceIndex.value = progress.sentenceIndex
+         lives.value = progress.lives
+         currentStreak.value = progress.currentStreak
+    }
+}
+
 // --- Comprobar respuesta ---
 function checkAnswer() {
   if (lives.value === 0 || !currentSentence.value.missing) return
@@ -83,7 +104,7 @@ function checkAnswer() {
     currentStreak.value = 0
     feedback.value = 'Incorrecto ❌'
   }
-
+  saveProgress()
   setTimeout(nextSentence, 1000)
 }
 
@@ -108,14 +129,23 @@ function nextSentence() {
   }
 
   userAnswer.value = ''
+   saveProgress() // <--- guardar aquí también
 }
+
 
 // --- Watchers ---
 watch(lives, (v) => {
   if (v === 0) feedback.value = 'Game Over ❌'
+  saveProgress()
 })
 
 watch(currentStreak, (v) => {
   if (v > 0 && v % 5 === 0) lives.value++
+  saveProgress()
+})
+
+// --- Cargar progreso al iniciar ---
+onMounted(() => {
+   readProgress()
 })
 </script>
