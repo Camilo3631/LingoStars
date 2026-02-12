@@ -4,10 +4,10 @@
 
     <input 
      :value="modelValue"
-     @input="$emit('update:modelValue', $event.target.value)"
+     @input="emit('update:modelValue', $event.target.value)"
      :disabled="disabled"
      class="border-b border-white w-16 sm:w-24 md:w-32 text-center text-[1.2rem]"
-     @keyup.enter="$emit('submit')"
+     @keyup.enter="emit('submit')"
      />
      <span>{{ sentence.full.split('___')[1] }}</span>
    </p>
@@ -19,4 +19,7 @@ defineProps({
      modelValue: String,
      disabled: Boolean
 })
-</script>
+
+const emit = defineEmits(['update:modelValue', 'submit'])
+
+</script>ls

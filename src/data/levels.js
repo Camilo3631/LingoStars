@@ -1,6 +1,3 @@
-
-
-
 export const levelsByLanguage = {
 
     es: [
@@ -106,7 +103,8 @@ export const levelsByLanguage = {
                 { full: '___ jest tutaj', missing: 'pies', options: ['kot', 'pies', 'mysz'] },
                 { full: 'Piję ___', missing: 'wodę', options: ['wodę', 'sok', 'mleko'] },
                 { full: 'Jem ___', missing: 'jabłko', options: ['jabłko', 'banan', 'pomarańczę'] },
-                { full: '___ biega szybko', missing: 'pies', options: ['pies', 'kot', 'mysz'] }
+                { full: 'On ___', missing: 'idzie', options: ['idzie', 'tańczy', 'śpiewa'] }
+
             ]
         },
         {
@@ -115,7 +113,7 @@ export const levelsByLanguage = {
                 { full: 'Moja ___ ma na imię Anna', missing: 'mama', options: ['mama', 'tata', 'brat'] },
                 { full: 'Mam ___', missing: 'brata', options: ['brata', 'wujka', 'dziadka'] },
                 { full: 'Moja ___ dobrze gotuje', missing: 'babcia', options: ['babcia', 'kuzynka', 'siostra'] },
-                { full: 'Mój ___ dużo pracuje', missing: 'tata', options: ['tata', 'mama', 'syn'] }
+                { full: 'Mój ___ dużo pracuje', missing: 'tata', options: ['tata', 'wujek', 'syn'] }
             ]
         },
         {
@@ -142,7 +140,7 @@ export const levelsByLanguage = {
                 { full: '___ jest kluczem do sukcesu', missing: 'Wiedza', options: ['Wiedza', 'Szczęście', 'Pieniądze'] },
                 { full: '___ napędza innowacje', missing: 'Kreatywność', options: ['Kreatywność', 'Rutyna', 'Strach'] },
                 { full: '___ buduje charakter', missing: 'Dyscyplina', options: ['Dyscyplina', 'Wygoda', 'Pośpiech'] },
-                { full: '___ uczy wielkich lekcji', missing: 'Doświadczenie', options: ['Doświadczenie', 'Teoria', 'Szczęście'] }
+                { full: '___ uczy wielkich lekcji', missing: 'Doświadczenie', options: ['Doświadczenie', 'Teoria', 'Umiejętności'] }
             ]
         }
     ],
@@ -162,8 +160,8 @@ export const levelsByLanguage = {
             sentences: [
                 { full: 'Ma ___ s\'appelle Marian', missing: 'sœur', options: ['mère', 'sœur', 'grand-mère'] },
                 { full: 'J\'ai un ___', missing: 'frère', options: ['frère', 'oncle', 'grand-père'] },
-                { full: 'Ma ____ cuisine bien', missing: 'grand-mère', options: ['grand-mère', 'cousine', 'nièce'] },
-                { full: 'Mon ____ travaille beaucoup', missing: 'père', options: ['père', 'mère', 'fils'] }
+                { full: 'Ma ___ cuisine bien', missing: 'grand-mère', options: ['grand-mère', 'cousine', 'nièce'] },
+                { full: 'Mon ___ travaille beaucoup', missing: 'père', options: ['père', 'mère', 'fils'] }
             ]
         },
         {
@@ -178,9 +176,11 @@ export const levelsByLanguage = {
         {
             name: 'Upper Intermediate',
             sentences: [
-                { full: 'Le succès vient à ceux qui ___', missing: 'travaillent dur', options: ['travailllent dur', 'se reposent', 'abandonnent'] },
+                { full: 'Le succès vient à ceux qui ___', missing: 'travaillent dur', options: ['travaillent dur', 'se reposent', 'abandonnent'] },
                 { full: 'Il est important de ___ chaque jour', missing: 'pratiquer', options: ['pratiquer', 'ignorer', 'arrêter'] },
-                { full: 'La patience est une ___', missing: 'vertu', options: ['vertu', 'force', 'idée'] }
+                { full: 'La patience est une ___', missing: 'vertu', options: ['vertu', 'force', 'idée'] },
+                { full: 'Les défis nous aident à ___', missing: 'grandir', options: ['grandir', 'perdre', 'oublier'] }
+
             ]
         },
         {
@@ -188,7 +188,7 @@ export const levelsByLanguage = {
             sentences: [
                 { full: '___ est la clé du succès', missing: 'La connaissance', options: ['La connaissance', 'La chance', 'L\'argent'] },
                 { full: '___ stimule l\'innovation', missing: 'La créativité', options: ['La créativité', 'La routine', 'La peur'] },
-                { full: '___ forge le caractpère', missing: 'La discipline', options: ['La discipline', 'Le confort', 'La précipitation'] },
+                { full: '___ forge le caractère', missing: 'La discipline', options: ['La discipline', 'Le confort', 'La précipitation'] },
                 { full: '___ enseigne de grandes leçons', missing: 'L\'expérience', options: ['L\'expérience', 'La théorie', 'La chance'] }
 
             ]
@@ -217,32 +217,80 @@ export const levelsByLanguage = {
         {
             name: 'Intermediate',
             sentences: [
-                { full: 'Studio ___ la sera', missing: 'italiano', options: ['italiano', 'spagnlo', 'tedesco'] },
-                { full: 'Loro ___ molto', missing: 'Viaggiano', options: ['viaggiano', 'dormono', 'leggono'] },
+                { full: 'Studio ___ la sera', missing: 'italiano', options: ['italiano', 'spagnolo', 'tedesco'] },
+                { full: 'Loro ___ molto', missing: 'viaggiano', options: ['viaggiano', 'dormono', 'leggono'] },
                 { full: 'Il treno ___ presto', missing: 'parte', options: ['parte', 'arriva', 'finisce'] },
                 { full: 'Mi piace ___ musica', missing: 'ascoltare', options: ['ascoltare', 'scrivere', 'compare'] }
             ]
         },
         {
-            name: 'Upper-Intermediate',
+            name: 'Upper Intermediate',
             sentences: [
                 { full: 'Se ho tempo, ___ viaggio', missing: 'faccio', options: ['faccio', 'bevo', 'vendo'] },
                 { full: 'Stiamo ___ un progetto', missing: 'preparando', options: ['preparando', 'mangiando', 'dormendo'] },
                 { full: 'Il film ___ interessante', missing: 'sembra', options: ['sembra', 'mangia', 'corre'] },
-                { full: 'Lui ___ lavarore qui', missing: 'voule', options: ['vuole', 'vede', 'entra'] }
+                { full: 'Lui ___ lavorare qui', missing: 'vuole', options: ['vuole', 'vede', 'entra'] }
             ]
         },
         {
             name: 'Advanced',
             sentences: [
                 { full: 'Nonostante la pioggia, ___', missing: 'continuiamo', options: ['continuiamo', 'partiamo', 'chiudiamo'] },
-                { full: 'Avei ___ più tempo', missing: 'voluto', options: ['voltuto', 'preso', 'letto'] },
+                { full: 'Avei ___ più tempo', missing: 'voluto', options: ['voluto', 'preso', 'letto'] },
                 { full: 'È importante ___ bene', missing: 'comunicare', options: ['comunicare', 'viaggiare', 'mangiare'] },
                 { full: 'Si dice che ___ domani', missing: 'pioverà', options: ['pioverà', 'mangia', 'corre'] }
             ]
         }
     ],
 
+    de: [
+        {
+            name: 'Beginner',
+            sentences: [
+                { full: 'Ich esse ___ gern', missing: 'Brot', options: ['Brot', 'Reis', 'Fisch'] },
+                { full: 'Der ___ ist gut', missing: 'Kaffee', options: ['Kaffee', 'Saft', 'Tee'] },
+                { full: 'Sie ___ zu Hause', missing: 'arbeitet', options: ['arbeitet', 'schläft', 'isst'] },
+                { full: 'Wir gehen in den ___', missing: 'Park', options: ['Park', 'Markt', 'Bahnhof'] }
+            ]
+        },
+        {
+            name: 'Elementary',
+            sentences: [
+                { full: 'Ich bin ___', missing: 'Student', options: ['Student', 'Arzt', 'Koch'] },
+                { full: 'Ich wohne in ___', missing: 'Berlin', options: ['Berlin', 'München', 'Rom'] },
+                { full: 'Ich trinke ___', missing: 'Wasser', options: ['Wasser', 'Milch', 'Bier'] },
+                { full: 'Das ist mein ___', missing: 'Freund', options: ['Freund', 'Hund', 'Bruder'] }
+            ]
+        },
+        {
+            name: 'Intermediate',
+            sentences: [
+                { full: 'Ich lerne ___', missing: 'Deutsch', options: ['Deutsch', 'Italienisch', 'Französisch'] },
+                { full: 'Sie ___ schnell', missing: 'laufen', options: ['laufen', 'schlafen', 'lesen'] },
+                { full: 'Der Zug ___ früh', missing: 'kommt', options: ['kommt', 'isst', 'trinkt'] },
+                { full: 'Ich möchte ___ reisen', missing: 'mehr', options: ['mehr', 'wenig', 'nie'] }
+            ]
+        },
+        {
+            name: 'Upper Intermediate',
+            sentences: [
+                { full: 'Wenn ich Zeit habe, ___ ich', missing: 'reise', options: ['reise', 'esse', 'schlafe'] },
+                { full: 'Wir ___ ein Projekt', missing: 'planen', options: ['planen', 'kochen', 'sehen'] },
+                { full: 'Der Film ___ interessant', missing: 'wirkt', options: ['wirkt', 'rennt', 'isst'] },
+                { full: 'Er ___ hier arbeiten', missing: 'möchte', options: ['möchte', 'findet', 'liest'] }
+            ]
+        },
+        {
+            name: 'Advanced',
+            sentences: [
+                { full: '___ ist der Schlüssel zum Erfolg', missing: 'Wissen', options: ['Wissen', 'Glück', 'Geld'] },
+                { full: '___ treibt Innovation voran', missing: 'Kreativität', options: ['Kreativität', 'Routine', 'Angst'] },
+                { full: '___ stärkt den Charakter', missing: 'Disziplin', options: ['Disziplin', 'Bequemlichkeit', 'Eile'] },
+                { full: '___ lehrt große Lektionen', missing: 'Erfahrung', options: ['Erfahrung', 'Theorie', 'Glück'] }
+            ]
+        }
+
+    ]
 }
 
 

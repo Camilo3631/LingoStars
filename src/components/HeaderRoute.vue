@@ -8,10 +8,10 @@
 
     <!-- MASCOTA -->
     <img
-      :src="pets[currentView]"
+      :src="currentPet"
       alt="Mascota"
       class="w-26 h-26 sm:w-24 sm:h-24 md:w-28 mx-auto block rounded-full shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
-      @click="goHome"
+      @click="handleClick"
     />
 
     <!-- SUBTÍTULO -->
@@ -22,16 +22,19 @@
   </section>
 </template>
 
-
 <script setup>
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ref } from 'vue'
+import { defineEmits } from 'vue'
+
+// Emit para reiniciar el juego
+const emit = defineEmits(['resetGame'])
 
 // Textos
 const title = "LingoStars"
 const subtitle = "Choose your language"
 
-// Mascotas por ruta
+// Mascotas por idioma
 const pets = {
   Es: new URL('@/assets/pets/Cat.png', import.meta.url).href,
   En: new URL('@/assets/pets/Dog.png', import.meta.url).href,
@@ -41,11 +44,16 @@ const pets = {
   De: new URL('@/assets/pets/Bear.png', import.meta.url).href
 }
 
+// Router y ruta actual
 const route = useRoute()
 const router = useRouter()
-const currentView = route.name
 
-const goHome = () => {
-  router.push({ name: 'Home' })
+// Computed para mostrar la mascota según la ruta
+const currentPet = computed(() => pets[route.name] || pets['Es'])
+
+// Función de click: siempre reinicia gane o pierda
+const handleClick = () => {
+  emit('resetGame')        // 🔥 primero reinicia el juego
+  router.push({ name: 'Home' }) // luego vamos al Home
 }
 </script>
