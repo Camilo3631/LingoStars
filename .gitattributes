@@ -1,1 +1,16 @@
-* text=auto eol=lf
+# Carpetas generadas (NO contar)
+.output/** linguist-vendored
+.nuxt/** linguist-vendored
+.nitro/** linguist-vendored
+.cache/** linguist-vendored
+dist/** linguist-vendored
+node_modules/** linguist-vendored
+
+# Logs
+*.log linguist-vendored
+
+# Lenguajes principales
+*.vue linguist-language=Vue
+*.js linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.css linguist-language=CSS
