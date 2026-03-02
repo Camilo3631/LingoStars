@@ -1,69 +1,82 @@
-# LigoStarts
+# LingoStars 🌍✨
 
-This template should help get you started developing with Vue 3 in Vite.
+LingoStars es una aplicación web interactiva de aprendizaje de idiomas desarrollada con Vue 3.  
+Aprovecha el sistema de reactividad para actualizar progreso, vidas y niveles en tiempo real sin recargar la página.
 
-## Recommended IDE Setup
+La aplicación combina aprendizaje estructurado y gamificación para ofrecer una experiencia dinámica y motivadora.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🎯 Objetivo
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Desarrollar una plataforma educativa interactiva que combine progresión estructurada, reactividad y recompensas digitales para mejorar la motivación en el aprendizaje de idiomas.
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🌎 Idiomas Disponibles
 
-## Project Setup
+- Español 🇪🇸
+- Inglés 🇬🇧
+- Polaco 🇵🇱
+- Francés 🇫🇷
+- Alemán 🇩🇪
+- Italiano 🇮🇹
 
-```sh
+Cada idioma cuenta con su propia mascota y una ruta de aprendizaje independiente.
+
+---
+
+## 🌍 Sistema de Aprendizaje
+
+- 5 niveles progresivos por idioma  
+- 3 vidas por partida  
+- 1 vida extra al completar un nivel  
+- Si se pierden todas las vidas, el jugador debe tocar la mascota para volver al inicio (Home)  
+- Desde el Home puede volver a entrar a cualquier idioma  
+- Cada idioma guarda su progreso de forma independiente  
+- Al completar los 5 niveles de un idioma se desbloquea y descarga automáticamente un trofeo oficial con su mascota  
+
+---
+
+## 💻 Arquitectura Técnica
+
+- SPA (Single Page Application)  
+- Reactividad en tiempo real gracias a Vue 3  
+- Arquitectura basada en componentes  
+- Sistema modular organizado por idioma  
+- Gestión de progreso por ruta independiente  
+- Interfaz limpia, intuitiva y responsive  
+
+---
+
+## 🛠 Tecnologías Utilizadas
+
+- Vue 3  
+- Vue Router  
+- Vite  
+- JavaScript  
+- Tailwind CSS  
+
+---
+
+## 📸 Vista Previa
+
+### 🏠 Pantalla Principal
+![Home](./src/assets/home.png)
+
+### 🇬🇧 Ruta de Inglés
+![Ruta Inglés](./src/assets/uk.png)
+
+---
+
+## 📦 Instalación
+
 npm install
-```
 
-### Compile and Hot-Reload for Development
+## 💻 Desarrollo
 
-```sh
 npm run dev
-```
 
-### Compile and Minify for Production
+## 🏗 Build para Producción
 
-```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
